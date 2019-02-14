@@ -18,10 +18,36 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func didTapMenu(_ sender: UIBarButtonItem) {
-        guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuViewController") else { return }
+        guard let menuViewController = storyboard?.instantiateViewController(withIdentifier: "MenuViewController") as? MenuViewController else { return }
+        menuViewController.didTapMenuType = { menuType in
+            self.transitionToNew(menuType)
+        }
         menuViewController.modalPresentationStyle = .overCurrentContext
         menuViewController.transitioningDelegate = self
         present(menuViewController, animated: true, completion: nil)
+    }
+    
+    func transitionToNew(_ menuType: MenuType) {
+        let title = String(describing: menuType).capitalized
+        self.title = title
+        
+        switch menuType {
+        case .camera:
+            let backView = UIView()
+            backView.backgroundColor = .red
+            backView.frame = self.view.bounds
+            self.view.addSubview(backView)
+        case .profile:
+            let backView = UIView()
+            backView.frame = self.view.bounds
+            backView.backgroundColor = .green
+            self.view.addSubview(backView)
+        default:
+            let backView = UIView()
+            backView.frame = self.view.bounds
+            backView.backgroundColor = .yellow
+            self.view.addSubview(backView)
+        }
     }
 }
 
@@ -33,7 +59,7 @@ extension HomeViewController: UIViewControllerTransitioningDelegate {
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.isPresenting = true
+        transition.isPresenting = false
         return transition
     }
     

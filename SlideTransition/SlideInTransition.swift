@@ -11,9 +11,10 @@ import UIKit
 class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
     var isPresenting = false
+    let dammingView = UIView()
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 3.0
+        return 0.3
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
@@ -26,14 +27,20 @@ class SlideInTransition: NSObject, UIViewControllerAnimatedTransitioning {
         let finalHeight = toViewController.view.bounds.height
         
         if isPresenting {
+            dammingView.backgroundColor = .black
+            dammingView.alpha = 0.0
+            containerView.addSubview(dammingView)
+            dammingView.frame = containerView.bounds
             containerView.addSubview(toViewController.view)
             
             toViewController.view.frame = CGRect(x: -finalWidth, y: 0, width: finalWidth, height: finalHeight)
         }
         let transform = {
+            self.dammingView.alpha = 0.5
             toViewController.view.transform = CGAffineTransform(translationX: finalWidth, y: 0)
         }
         let identity = {
+            self.dammingView.alpha = 0.0
             fromViewController.view.transform = .identity
         }
         
