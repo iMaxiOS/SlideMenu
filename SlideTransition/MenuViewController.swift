@@ -8,6 +8,12 @@
 
 import UIKit
 
+enum MenuType: Int {
+    case home
+    case camera
+    case profile
+}
+
 class MenuViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -17,4 +23,10 @@ class MenuViewController: UITableViewController {
         
     }
   
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let menuType = MenuType(rawValue: indexPath.row) else { return }
+        dismiss(animated: true) {
+            print("tap \(menuType)")
+        }
+    }
 }

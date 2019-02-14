@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC2B4BA82215E7A40066AC1F /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B4BA72215E7A40066AC1F /* SlideInTransition.swift */; };
 		ACF613C422134CCD005D69D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF613C322134CCD005D69D2 /* AppDelegate.swift */; };
 		ACF613C622134CCD005D69D2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF613C522134CCD005D69D2 /* HomeViewController.swift */; };
 		ACF613C922134CCD005D69D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF613C722134CCD005D69D2 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC2B4BA72215E7A40066AC1F /* SlideInTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInTransition.swift; sourceTree = "<group>"; };
 		ACF613C022134CCD005D69D2 /* SlideTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF613C322134CCD005D69D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACF613C522134CCD005D69D2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				ACF613CA22134CCE005D69D2 /* Assets.xcassets */,
 				ACF613CC22134CCE005D69D2 /* LaunchScreen.storyboard */,
 				ACF613CF22134CCE005D69D2 /* Info.plist */,
+				AC2B4BA72215E7A40066AC1F /* SlideInTransition.swift */,
 			);
 			path = SlideTransition;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF613C622134CCD005D69D2 /* HomeViewController.swift in Sources */,
+				AC2B4BA82215E7A40066AC1F /* SlideInTransition.swift in Sources */,
 				ACF613D622134E2B005D69D2 /* MenuViewController.swift in Sources */,
 				ACF613C422134CCD005D69D2 /* AppDelegate.swift in Sources */,
 			);

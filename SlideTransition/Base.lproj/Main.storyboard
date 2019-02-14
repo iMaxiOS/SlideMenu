@@ -23,7 +23,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="9vW-Oj-N74">
                             <color key="tintColor" red="1" green="0.0" blue="0.13011023120000001" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="kdC-vH-6Cn" kind="show" id="YkQ-sy-zmF"/>
+                                <action selector="didTapMenu:" destination="BYZ-38-t0r" id="l3k-iZ-9Ic"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -35,7 +35,7 @@
         <!--Menu View Controller-->
         <scene sceneID="ki5-sd-lqc">
             <objects>
-                <tableViewController id="kdC-vH-6Cn" customClass="MenuViewController" customModule="SlideTransition" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MenuViewController" id="kdC-vH-6Cn" customClass="MenuViewController" customModule="SlideTransition" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="nwq-cb-sk5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,10 +62,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ca8-Cp-EFm">
-                                                    <rect key="frame" x="16" y="68" width="359" height="2"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="16" y="69" width="359" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="2" id="ZLL-cr-lam"/>
+                                                        <constraint firstAttribute="height" constant="1" id="ZLL-cr-lam"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -103,10 +103,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0I6-Zt-QXB">
-                                                    <rect key="frame" x="16" y="68" width="359" height="2"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="16" y="69" width="359" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="2" id="Uez-ww-I1J"/>
+                                                        <constraint firstAttribute="height" constant="1" id="Uez-ww-I1J"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -144,10 +144,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IGG-ad-Q0i">
-                                                    <rect key="frame" x="16" y="68" width="359" height="2"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <rect key="frame" x="16" y="69" width="359" height="1"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="2" id="tPQ-Mm-lgB"/>
+                                                        <constraint firstAttribute="height" constant="1" id="tPQ-Mm-lgB"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -174,6 +174,7 @@
                             <outlet property="delegate" destination="kdC-vH-6Cn" id="XMn-sE-naU"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="H3U-Vp-nuk"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaN-i4-FTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
